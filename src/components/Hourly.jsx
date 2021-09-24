@@ -33,7 +33,7 @@ const Hourly = () => {
                 </Col>
                 </Row>
                 <Col md={1}>
-                    <h5 style={{position: "relative", top: "5px"}} className="text-muted ml-5">Feels like:</h5>
+                    <h5 style={{position: "relative", top: "5px"}} className="text-muted ml-5">Feels like</h5>
                 </Col>
                 <Row cols={12} className="text-muted ml-1">
                 <Col md={1}>
