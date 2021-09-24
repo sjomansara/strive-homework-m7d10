@@ -14,7 +14,9 @@ const MyNavbar = () => {
                 <NavDropdown.Item href="#action/3.1">Stockholm</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Helsinki</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Seoul</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">Tokyo</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">Amsterdam</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">Oslo</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">Copenhagen</NavDropdown.Item>
             </NavDropdown>
             </Nav>
             <Form inline>
