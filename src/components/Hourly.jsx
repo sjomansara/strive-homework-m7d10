@@ -2,13 +2,21 @@ import { Col, Row } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThermometerThreeQuarters, faTint, faWind, faUmbrella } from '@fortawesome/free-solid-svg-icons'
 
-const Hourly = () => {
+const Hourly = (props) => {
+    const date = new Date(props.dt * 1000)
+
+    const convertKelvinToCelsius = (temp) => {
+        return temp - 273.15
+    }
+
+    const month = parseInt(date.getUTCMonth() + 1)
+    
     return (
         <div className="mx-5 my-3 shadow-sm rounded" id="hourlyContainer">
             <Row className="p-4 ml-5">
                 <Col md={1}>
-                    <h5 className="text-black">12 PM</h5>
-                    <h5 className="text-muted">24/9</h5>
+                    <h5 className="text-black">{date.getHours()}</h5>
+                    <h5 className="text-muted">{date.getUTCDate() + "/" + month}</h5>
                 </Col>
                 <Col className="ml-4" md={1}>
                     <img src="https://image.flaticon.com/icons/png/512/164/164806.png" width="50px" height="50px"/>
