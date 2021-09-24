@@ -1,12 +1,17 @@
 import { Col, Row } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThermometerThreeQuarters, faTint, faWind, faUmbrella } from '@fortawesome/free-solid-svg-icons'
+import { faThermometerThreeQuarters, faTint, faWind } from '@fortawesome/free-solid-svg-icons'
 
 const Hourly = (props) => {
     const date = new Date(props.dt * 1000)
 
     const convertKelvinToCelsius = (temp) => {
-        return temp - 273.15
+        let celsius = temp - 273.15
+        return Math.round(celsius)
+    }
+
+    const fixString = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     const month = parseInt(date.getUTCMonth() + 1)
@@ -26,18 +31,18 @@ const Hourly = (props) => {
                     <FontAwesomeIcon icon={faThermometerThreeQuarters} style={{fontSize: "30px", position: "relative", top: "15px", color: "#F8C146"}} />
                 </Col>
                 <Col md={1}>
-                    <h4 className="text-muted" style={{position: "relative", top: "15px"}}>10°</h4>
+                    <h4 className="text-muted" style={{position: "relative", top: "15px"}}>{convertKelvinToCelsius(props.temp)}°</h4>
                 </Col>
                 </Row>
                 <Col md={1}>
-                    <h5 style={{position: "relative", top: "5px"}} className="text-muted ml-3">Partly cloudy</h5>
+                    <h5 style={{position: "relative", top: "5px"}} className="text-muted ml-3">{fixString(props.description)}</h5>
                 </Col>
                 <Row className="ml-5" cols={12}>
                 <Col md={1}>
                     <FontAwesomeIcon icon={faTint} style={{fontSize: "30px", position: "relative", top: "15px", color: "#57C2F8"}} />
                 </Col>
                 <Col md={1}>
-                    <h4 className="text-muted" style={{position: "relative", top: "15px"}}>12%</h4>
+                    <h4 className="text-muted" style={{position: "relative", top: "15px"}}>{props.humidity}%</h4>
                 </Col>
                 </Row>
                 <Col md={1}>
@@ -45,23 +50,15 @@ const Hourly = (props) => {
                 </Col>
                 <Row cols={12} className="text-muted ml-1">
                 <Col md={1}>
-                    <h4 className="" style={{position: "relative", top: "15px"}}>8°</h4>
+                    <h4 className="" style={{position: "relative", top: "15px"}}>{convertKelvinToCelsius(props.feelsLike)}°</h4>
                 </Col>
                 </Row>
-                <Row>
-                    <Col className="ml-5" md={1}>
-                    <FontAwesomeIcon className="ml-2" icon={faUmbrella} style={{fontSize: "30px", position: "relative", top: "15px", color: "#F8C146"}} />
-                    </Col>
-                    <Col md={1}>
-                        <h4 className="text-muted ml-4" style={{position: "relative", top: "15px"}}>0mm</h4>
-                    </Col>
-                </Row>
-                <Row className="" cols={12}>
+                <Row className="ml-4" cols={12}>
                 <Col md={1}>
                     <FontAwesomeIcon className="ml-4" icon={faWind} style={{fontSize: "30px", position: "relative", top: "15px", color: "#57C2F8"}} />
                 </Col>
                 <Col md={1}>
-                    <h4 className="ml-5 text-muted" style={{position: "relative", top: "15px"}}>6m/s</h4>
+                    <h4 className="ml-5 text-muted" style={{position: "relative", top: "15px"}}>{props.windSpeed}m/s</h4>
                 </Col>
                 </Row>
             </Row>

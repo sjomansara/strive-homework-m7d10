@@ -7,7 +7,8 @@ import Hourly from '../components/Hourly';
 import { useEffect, useState } from 'react';
 
 function Home() {
-    const [weatherData, setWeatherData] = useState(undefined)
+    const [hourlyData, setHourlyData] = useState(undefined)
+    const [currentData, setCurrentData] = useState(undefined)
 
     const fetchWeather = async () => {
         try {
@@ -17,7 +18,8 @@ function Home() {
                 const weatherResponse = await response.json()
                 console.log(weatherResponse)
                 let weatherTrimmed = weatherResponse.hourly.slice(0, 24)
-                setWeatherData(weatherTrimmed)
+                setHourlyData(weatherTrimmed)
+                setCurrentData(weatherResponse.current)
             }
         } catch (error) {
             console.error(error)
@@ -31,10 +33,10 @@ function Home() {
     return (
     <div>
         <MyNavbar />
-        <MyJumbotron />
+        {currentData && <MyJumbotron windSpeed={currentData.wind_speed} temp={currentData.temp} />}
         <MiddleBar />
-        {weatherData && weatherData.map(forecast => {
-            return <Hourly dt={forecast.dt} />
+        {hourlyData && hourlyData.map(forecast => {
+            return <Hourly feelsLike={forecast.feels_like} windSpeed={forecast.wind_speed} humidity={forecast.humidity} dt={forecast.dt} temp={forecast.temp} description={forecast.weather[0].description} />
         })}
     </div>
     );
