@@ -15,7 +15,7 @@ const Hourly = (props) => {
         <div className="mx-5 my-3 shadow-sm rounded" id="hourlyContainer">
             <Row className="p-4 ml-5">
                 <Col md={1}>
-                    <h5 className="text-black">{date.getHours()}</h5>
+                    <h5 className="text-black">{date.getHours()}:00</h5>
                     <h5 className="text-muted">{date.getUTCDate() + "/" + month}</h5>
                 </Col>
                 <Col className="ml-4" md={1}>
