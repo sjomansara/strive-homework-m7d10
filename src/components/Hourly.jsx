@@ -58,7 +58,7 @@ const Hourly = (props) => {
                     <FontAwesomeIcon className="ml-4" icon={faWind} style={{fontSize: "30px", position: "relative", top: "15px", color: "#57C2F8"}} />
                 </Col>
                 <Col md={1}>
-                    <h4 className="ml-5 text-muted" style={{position: "relative", top: "15px"}}>{props.windSpeed}m/s</h4>
+                    <h4 className="ml-5 text-muted" style={{position: "relative", top: "5px"}}>{props.windSpeed} <span style={{fontSize: "20px"}}>m/s</span></h4>
                 </Col>
                 </Row>
             </Row>
