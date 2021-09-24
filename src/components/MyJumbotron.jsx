@@ -32,20 +32,20 @@ const MyJumbotron = (props) => {
                 <img className="" src="https://www.frozenropes.com/natick/wp-content/uploads/sites/11/2021/06/sun-transparent.png" width="60px" height="60px"/>
             </Col>
             <Col md={1}>
-                <FontAwesomeIcon className="ml-4 text-muted" icon={faThermometerThreeQuarters} style={{fontSize: "25px", position: "relative", top: "15px"}} />
+                <FontAwesomeIcon className="ml-4" icon={faThermometerThreeQuarters} style={{fontSize: "25px", position: "relative", top: "15px", color: "#57C2F8"}} />
             </Col>
             <Col md={1}>
                 <h4 className="text-muted" style={{fontSize: "20px", position: "relative", top: "15px"}}>{convertKelvinToCelsius(props.temp)}°</h4>
             </Col>
             <Col md={1}>
-                <FontAwesomeIcon className="text-muted ml-4" icon={faUmbrella} style={{fontSize: "25px", position: "relative", top: "15px"}} />
+                <FontAwesomeIcon className="ml-4" icon={faUmbrella} style={{fontSize: "25px", position: "relative", top: "15px", color: "#F8C146"}} />
             </Col>
             <Col md={2}>
-                <h4 className="text-muted ml-2" style={{fontSize: "20px", position: "relative", top: "15px"}}>0 mm</h4>
+                <h4 className="text-muted ml-2" style={{fontSize: "20px", position: "relative", top: "15px"}}>3 mm</h4>
             </Col>
             <Row>
             <Col md={1}>
-                <FontAwesomeIcon className="text-muted" icon={faWind} style={{fontSize: "25px", position: "relative", top: "15px"}} />
+                <FontAwesomeIcon className="" icon={faWind} style={{fontSize: "25px", position: "relative", top: "15px", color: "#57C2F8"}} />
             </Col>
             <Col md={1}>
                 <h4 className="text-muted ml-2" style={{fontSize: "20px", position: "relative", top: "5px"}}>{props.windSpeed} m/s</h4>

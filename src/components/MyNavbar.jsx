@@ -1,4 +1,4 @@
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from "react-bootstrap"
 
 const MyNavbar = () => {
     return (
@@ -10,6 +10,12 @@ const MyNavbar = () => {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Forecast</Nav.Link>
             <Nav.Link href="#link">Favorites</Nav.Link>
+            <NavDropdown title="Select city" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Stockholm</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Helsinki</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Seoul</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">Tokyo</NavDropdown.Item>
+            </NavDropdown>
             </Nav>
             <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
