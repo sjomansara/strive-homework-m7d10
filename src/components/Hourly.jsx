@@ -1,21 +1,21 @@
 import { Col, Row } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThermometerThreeQuarters, faTint, faWind } from '@fortawesome/free-solid-svg-icons'
+import { faThermometerThreeQuarters, faTint, faWind, faUmbrella } from '@fortawesome/free-solid-svg-icons'
 
 const Hourly = () => {
     return (
-        <div className="mx-5 my-3 shadow-sm" id="hourlyContainer">
+        <div className="mx-5 my-3 shadow-sm rounded" id="hourlyContainer">
             <Row className="p-4 ml-5">
                 <Col md={1}>
-                    <h6 className="text-black">12 PM</h6>
-                    <h6 className="text-muted">24/9</h6>
+                    <h5 className="text-black">12 PM</h5>
+                    <h5 className="text-muted">24/9</h5>
                 </Col>
                 <Col className="ml-4" md={1}>
                     <img src="https://image.flaticon.com/icons/png/512/164/164806.png" width="50px" height="50px"/>
                 </Col>
                 <Row className="ml-4 mr-4" cols={12}>
                 <Col md={1}>
-                    <FontAwesomeIcon className="text-muted" icon={faThermometerThreeQuarters} style={{fontSize: "30px", position: "relative", top: "15px"}} />
+                    <FontAwesomeIcon icon={faThermometerThreeQuarters} style={{fontSize: "30px", position: "relative", top: "15px", color: "#F8C146"}} />
                 </Col>
                 <Col md={1}>
                     <h4 className="text-muted" style={{position: "relative", top: "15px"}}>10°</h4>
@@ -26,7 +26,7 @@ const Hourly = () => {
                 </Col>
                 <Row className="ml-5" cols={12}>
                 <Col md={1}>
-                    <FontAwesomeIcon className="text-muted" icon={faTint} style={{fontSize: "30px", position: "relative", top: "15px"}} />
+                    <FontAwesomeIcon icon={faTint} style={{fontSize: "30px", position: "relative", top: "15px", color: "#57C2F8"}} />
                 </Col>
                 <Col md={1}>
                     <h4 className="text-muted" style={{position: "relative", top: "15px"}}>12%</h4>
@@ -40,9 +40,17 @@ const Hourly = () => {
                     <h4 className="" style={{position: "relative", top: "15px"}}>8°</h4>
                 </Col>
                 </Row>
-                <Row className="ml-4" cols={12}>
+                <Row>
+                    <Col className="ml-5" md={1}>
+                    <FontAwesomeIcon className="ml-2" icon={faUmbrella} style={{fontSize: "30px", position: "relative", top: "15px", color: "#F8C146"}} />
+                    </Col>
+                    <Col md={1}>
+                        <h4 className="text-muted ml-4" style={{position: "relative", top: "15px"}}>0mm</h4>
+                    </Col>
+                </Row>
+                <Row className="" cols={12}>
                 <Col md={1}>
-                    <FontAwesomeIcon className="text-muted ml-4" icon={faWind} style={{fontSize: "30px", position: "relative", top: "15px"}} />
+                    <FontAwesomeIcon className="ml-4" icon={faWind} style={{fontSize: "30px", position: "relative", top: "15px", color: "#57C2F8"}} />
                 </Col>
                 <Col md={1}>
                     <h4 className="ml-5 text-muted" style={{position: "relative", top: "15px"}}>6m/s</h4>
