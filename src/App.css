@@ -65,3 +65,11 @@ body {
 #button:hover {
   color: white;
 }
+
+#middleBar {
+  background-color: transparent;
+}
+
+#hourlyContainer {
+  background-color: white;
+}

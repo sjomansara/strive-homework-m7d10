@@ -2,8 +2,7 @@ import { Navbar, Nav, Form, FormControl, Button, NavDropdown, Container } from "
 
 const MiddleBar = () => {
     return (
-        <Container>
-        <Navbar bg="light" expand="lg" id="navbar" className="shadow-sm">
+        <Navbar expand="lg" id="middleBar" className="border-bottom mx-5 mb-4">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -13,7 +12,6 @@ const MiddleBar = () => {
             </Nav>
         </Navbar.Collapse>
         </Navbar>
-        </Container>
     )
 }
 
