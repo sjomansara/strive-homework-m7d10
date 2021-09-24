@@ -37,9 +37,6 @@ const Hourly = () => {
                 </Col>
                 <Row cols={12} className="text-muted ml-1">
                 <Col md={1}>
-                    <FontAwesomeIcon className="" icon={faThermometerThreeQuarters} style={{fontSize: "30px", position: "relative", top: "15px"}} />
-                </Col>
-                <Col md={1}>
                     <h4 className="" style={{position: "relative", top: "15px"}}>8°</h4>
                 </Col>
                 </Row>
