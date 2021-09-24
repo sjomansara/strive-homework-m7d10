@@ -73,3 +73,12 @@ body {
 #hourlyContainer {
   background-color: white;
 }
+
+#basic-nav-dropdown::after {
+  display: none;
+}
+
+#basic-nav-dropdown:hover::after {
+  width: 100%;
+  display: unset;
+}
