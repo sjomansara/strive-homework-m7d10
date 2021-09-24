@@ -5,10 +5,10 @@ import { faThermometerThreeQuarters, faTint, faWind } from '@fortawesome/free-so
 const Hourly = () => {
     return (
         <div className="mx-5 my-3 shadow-sm" id="hourlyContainer">
-            <Row className="p-4">
+            <Row className="p-4 ml-5">
                 <Col md={1}>
-                    <h6 className="text-black ml-2">12 PM</h6>
-                    <h6 className="text-muted ml-2">24/9</h6>
+                    <h6 className="text-black">12 PM</h6>
+                    <h6 className="text-muted">24/9</h6>
                 </Col>
                 <Col className="ml-4" md={1}>
                     <img src="https://image.flaticon.com/icons/png/512/164/164806.png" width="50px" height="50px"/>
